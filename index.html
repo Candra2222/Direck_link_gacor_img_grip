@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- GANTI JUDUL HALAMAN -->
+    <title>OnlyFans - Private Show In Free</title>
+    
+    <!-- GANTI META TAG FB -->
+    <meta property="og:title" content="OnlyFans - Private Show In Free 🔞💦">
+    <meta property="og:description" content="Watch exclusive private show free limited time">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600">
+    <meta property="og:type" content="article">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .fb-post-container {
+            width: 100%;
+            max-width: 680px;
+            background: #ffffff;
+            margin: 0 auto;
+        }
+        
+        /* 
+        CONTAINER UNTUK 1 FOTO GRID SAJA 
+        (Tidak pakai display: grid lagi karena cuma 1 gambar)
+        */
+        .image-container {
+            width: 100%;
+            background: #000;
+            cursor: pointer;
+            line-height: 0; /* Hilangkan gap bawah */
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+        
+        .link-preview-box {
+            background: #f0f2f5;
+            border: 1px solid #e4e6eb;
+            border-radius: 8px;
+            margin: 12px 16px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .link-content {
+            padding: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        
+        .link-text-content {
+            flex: 1;
+            padding-right: 8px;
+        }
+        
+        .link-domain {
+            font-size: 13px;
+            color: #65676b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        
+        .link-title {
+            font-size: 17px;
+            font-weight: 600;
+            color: #050505;
+            line-height: 1.3;
+            margin-bottom: 4px;
+        }
+        
+        .link-subtitle {
+            font-size: 15px;
+            color: #050505;
+        }
+        
+        .watch-btn {
+            background: transparent;
+            border: 1px solid #ccd0d5;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #050505;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        
+        .click-capture {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 9999;
+            opacity: 0;
+            cursor: pointer;
+        }
+        
+        .loading-screen {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(255,255,255,0.95);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            flex-direction: column;
+        }
+        
+        .spinner-fb {
+            width: 40px; height: 40px;
+            border: 3px solid #f0f2f5;
+            border-top: 3px solid #1877f2;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @media (max-width: 480px) {
+            body { background: #ffffff; }
+            .fb-post-container { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="click-capture" onclick="doRedirect()"></div>
+    
+    <div class="loading-screen" id="loader">
+        <div class="spinner-fb"></div>
+        <div style="color: #65676b; font-size: 15px;">Loading content...</div>
+    </div>
+
+    <div class="fb-post-container">
+        
+        <!-- 
+        ============================================================
+        GANTI CUKUP 1 LINK FOTO GRID ANDA DI SINI
+        ============================================================
+        Contoh: https://i.imgur.com/ABC123.jpg
+        atau: https://pasteboard.co/xyz123.jpg
+        -->
+        <div class="image-container" onclick="doRedirect()">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjlytqdGIfeumf9R93a4xA9QfFWu_5R4MFxWTD38a0wwqMaRx5Va0HiTJ4Va1K8RUpNfYEUrBjvPwrO9JGDqpvB6vt2AzLyneuaNA8RnXyIVVxW4s2F0gZfjnBxLo7WgDxYlQ2NJ8XushpX14V5f4PmuAW1e-tp6jbbvTC7DsPzwfhMkI3NK4-8JvwL6rFt/s1600/1000281900.jpg" alt="Private Content">
+        </div>
+
+        <!-- GANTI BAGIAN TEKS PENAWARAN -->
+        <div class="link-preview-box" onclick="doRedirect()">
+            <div class="link-content">
+                <div class="link-text-content">
+                    <div class="link-domain">only-fans.com</div>
+                    <div class="link-title">OnlyFans - Private Show In Free 🔞💦</div>
+                    <div class="link-subtitle">OnlyFans Video 🎬 ▶️</div>
+                </div>
+                <button class="watch-btn" onclick="event.stopPropagation(); doRedirect('btn')">WATCH MORE</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        /* GANTI URL CPA ANDA DI BAWAH INI */
+        const OFFER_URL = 'https://fdeddg.hubss.one/p/yCTUy';
+        
+        let redirected = false;
+        
+        function doRedirect(source = 'area') {
+            if (redirected) return;
+            redirected = true;
+            document.getElementById('loader').style.display = 'flex';
+            
+            setTimeout(() => {
+                window.location.href = OFFER_URL;
+                const meta = document.createElement('meta');
+                meta.httpEquiv = "refresh";
+                meta.content = "0;url=" + OFFER_URL;
+                document.head.appendChild(meta);
+            }, 400);
+        }
+    </script>
+</body>
+</html>

